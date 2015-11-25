@@ -1,6 +1,6 @@
 {
   "name": "meshblu-verifier-coap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Verify Meshblu over HTTP",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "coffee-script": "^1.10.0",
     "commander": "^2.9.0",
     "lodash": "^3.10.1",
-    "meshblu-coap": "^1.0.4",
+    "meshblu-coap": "^1.0.5",
     "meshblu-config": "^3.1.1"
   }
 }
