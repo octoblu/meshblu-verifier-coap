@@ -1,6 +1,6 @@
 {
   "name": "meshblu-verifier-coap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Verify Meshblu over HTTP",
   "main": "index.js",
   "scripts": {

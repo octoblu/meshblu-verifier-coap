@@ -35,11 +35,11 @@ describe 'Verifier', ->
           res.end JSON.stringify uuid: 'device-uuid'
 
         @handlers.whoamiHandler = @whoamiHandler = sinon.spy (req, res) =>
-          res.code = '2.00'
+          res.code = '2.05'
           res.end JSON.stringify uuid: 'device-uuid', type: 'meshblu:verifier'
 
         @handlers.unregisterHandler = @unregisterHandler = sinon.spy (req, res) =>
-          res.code = '2.04'
+          res.code = '2.05'
           res.end()
 
         @sut.verify (@error) =>
@@ -101,7 +101,7 @@ describe 'Verifier', ->
           res.end JSON.stringify uuid: 'device-uuid'
 
         @handlers.whoamiHandler = @whoamiHandler = sinon.spy (req, res) =>
-          res.code = '2.00'
+          res.code = '2.05'
           res.end JSON.stringify uuid: 'device-uuid', type: 'meshblu:verifier'
 
         @handlers.unregisterHandler = @unregisterHandler = sinon.spy (req, res) =>
