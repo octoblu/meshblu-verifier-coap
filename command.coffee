@@ -13,17 +13,25 @@ class Command
 
   run: =>
     @parseOptions()
+    timeoutSeconds = 30
+    timeoutSeconds = parseInt(process.env.TIMEOUT_SECONDS) if process.env.TIMEOUT_SECONDS
+    setTimeout @timeoutAndDie, timeoutSeconds * 1000
     meshbluConfig = new MeshbluConfig().toJSON()
     verifier = new Verifier {meshbluConfig}
     verifier.verify (error) =>
       @die error if error?
       console.log 'meshblu-verifier-coap successful'
+      process.exit 0
 
   die: (error) =>
     return process.exit(0) unless error?
     console.log 'meshblu-verifier-coap error'
     console.error error.stack
     process.exit 1
+
+  timeoutAndDie: =>
+    console.log 'meshblu-verifier-coap timeout'
+    @die new Error 'Timeout Exceeded'
 
 commandWork = new Command()
 commandWork.run()
