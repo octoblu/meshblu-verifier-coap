@@ -1,3 +1,4 @@
+_ = require 'lodash'
 async = require 'async'
 MeshbluCoap = require 'meshblu-coap'
 
@@ -14,9 +15,10 @@ class Verifier
       callback()
 
   _message: (callback) =>
-    @meshblu.subscribe uuid: @meshblu.uuid, (error, @stream) =>
+    @meshblu.subscribe @meshblu.uuid, {}, (error, @stream) =>
       return callback error if error?
       @stream.once 'data', (data) =>
+        data = JSON.parse data
         return callback new Error 'wrong message received' unless data?.payload == @nonce
         callback()
 
@@ -24,7 +26,7 @@ class Verifier
         devices: [@meshblu.uuid]
         payload: @nonce
 
-      @meshblu.message message
+      @meshblu.message message, =>
 
   _update: (callback) =>
     return callback() unless @device?
@@ -34,7 +36,7 @@ class Verifier
 
     @meshblu.update @meshblu.uuid, params, (data) =>
       return callback new Error data.error if data?.error?
-      @meshblu.whoami (data) =>
+      @meshblu.whoami (error, data) =>
         return callback new Error 'update failed' unless data?.nonce == @nonce
         callback()
 
@@ -52,6 +54,10 @@ class Verifier
       @_message
       @_update
       @_unregister
-    ], callback
+    ], (error) =>
+      # allow send buffer to be flushed
+      setTimeout =>
+        callback error
+      , 100
 
 module.exports = Verifier
