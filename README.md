@@ -2,7 +2,10 @@
 Verify Meshblu over HTTP
 
 [![Build Status](https://travis-ci.org/octoblu/meshblu-verifier-coap.svg?branch=master)](https://travis-ci.org/octoblu/meshblu-verifier-coap)
-[![Code Climate](https://codeclimate.com/github/octoblu/meshblu-verifier-coap/badges/gpa.svg)](https://codeclimate.com/github/octoblu/meshblu-verifier-coap)
-[![Test Coverage](https://codeclimate.com/github/octoblu/meshblu-verifier-coap/badges/coverage.svg)](https://codeclimate.com/github/octoblu/meshblu-verifier-coap)
-[![npm version](https://badge.fury.io/js/meshblu-verifier-coap.svg)](http://badge.fury.io/js/meshblu-verifier-coap)
-[![Gitter](https://badges.gitter.im/octoblu/help.svg)](https://gitter.im/octoblu/help)
+[![Test Coverage](https://codecov.io/gh/octoblu/meshblu-verifier-coap/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/meshblu-verifier-coap)
+[![Dependency status](http://img.shields.io/david/octoblu/meshblu-verifier-coap.svg?style=flat)](https://david-dm.org/octoblu/meshblu-verifier-coap)
+[![devDependency Status](http://img.shields.io/david/dev/octoblu/meshblu-verifier-coap.svg?style=flat)](https://david-dm.org/octoblu/meshblu-verifier-coap#info=devDependencies)
+[![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+
+[![NPM](https://nodei.co/npm/meshblu-verifier-coap.svg?style=flat)](https://npmjs.org/package/meshblu-verifier-coap)
+
