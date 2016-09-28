@@ -72,7 +72,7 @@ class Command
     }, (httpError) =>
       @die httpError if httpError?
       @die error if error?
-      console.log 'meshblu-verifier-mqtt successful'
+      console.log 'meshblu-verifier-coap successful'
       process.exit 0
 
   die: (error) =>
