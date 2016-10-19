@@ -1,5 +1,5 @@
-_ = require 'lodash'
-async = require 'async'
+_           = require 'lodash'
+async       = require 'async'
 MeshbluCoap = require 'meshblu-coap'
 
 class Verifier
