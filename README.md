@@ -1,5 +1,5 @@
 # meshblu-verifier-coap
-Verify Meshblu over HTTP
+Verify Meshblu over COAP
 
 [![Build Status](https://travis-ci.org/octoblu/meshblu-verifier-coap.svg?branch=master)](https://travis-ci.org/octoblu/meshblu-verifier-coap)
 [![Test Coverage](https://codecov.io/gh/octoblu/meshblu-verifier-coap/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/meshblu-verifier-coap)
@@ -8,4 +8,3 @@ Verify Meshblu over HTTP
 [![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
 
 [![NPM](https://nodei.co/npm/meshblu-verifier-coap.svg?style=flat)](https://npmjs.org/package/meshblu-verifier-coap)
-
